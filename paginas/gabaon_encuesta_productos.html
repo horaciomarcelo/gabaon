@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Gabaón | Ayúdanos a Mejorar</title>
+    <meta name="description" content="Participa en nuestra breve encuesta sobre los productos Gabaón. Tu opinión nos ayuda a ofrecer la mejor cosmética coreana para ti.">
+    <meta name="keywords" content="encuesta, Gabaón, productos, cosmética, opinión, cliente, belleza coreana">
+    
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <center>
+                <a href="../index.html">
+                    <img src="../images/gabaon_logo.png" alt="logo GABAON cosmetica coreana">
+                </a>
+                <br>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../paginas/productos_gabaon.html">Productos</a></li>
+                    <li><a href="gabaon_filosofia.html">Filosofía</a></li>
+                    <li><a href="formcontacto.html">Contacto</a></li>
+                </ul>
+            </center>
+            <hr>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <center>
+                <h1>Encuesta de Productos Gabaón</h1>
+                <p>¡Tu opinión es muy importante para nosotros! Responde a esta breve encuesta para ayudarnos a entender qué productos te interesan más.</p>
+            </center>
+        </section>
+
+        <hr>
+        <br>
+        
+        <section>
+            <form action="https://formspree.io/f/mjkeagvo" method="POST">
+                <input type="hidden" name="Origen" value="Formulario de Encuesta">
+
+                <center>
+                    <h3>1. ¿Cuál de nuestros productos comprarías?</h3>
+                    <p>Selecciona una opción:</p>
+                </center>
+
+                <div align="center">
+                    <input type="radio" id="crema-multipeptidos" name="producto" value="Crema Multipeptidos" required>
+                    <label for="crema-multipeptidos">Gabaón Crema Multipeptidos</label>
+                    <br><br>
+                    <input type="radio" id="idebenone" name="producto" value="Idebenone">
+                    <label for="idebenone">Gabaón Idebenone</label>
+                    <br><br>
+                    <input type="radio" id="all-in-one" name="producto" value="All In One">
+                    <label for="all-in-one">Gabaón All In One</label>
+                    <br><br>
+                    <input type="radio" id="mascarilla" name="producto" value="Mascarilla">
+                    <label for="mascarilla">Gabaón Mascarilla</label>
+                </div>
+                
+                <br>
+                <br>
+                
+                <center>
+                    <h3>2. ¿Por qué elegirías este producto?</h3>
+                    <p>Por favor, cuéntanos tu razón:</p>
+                </center>
+
+                <div align="center">
+                    <label for="razon">Tu respuesta:</label>
+                    <br>
+                    <textarea id="razon" name="razon" rows="5" cols="50" placeholder="Escribe aquí tu opinión..."></textarea>
+                </div>
+                
+                <br>
+                <br>
+
+                <center>
+                    <button type="submit">Enviar Encuesta</button>
+                </center>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+    
+    <footer>
+        <center>
+            <p>© 2025 GABAÓN.</p>
+        </center>
+    </footer>
+
+</body>
+</html>
