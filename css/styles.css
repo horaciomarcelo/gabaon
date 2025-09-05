@@ -1,8 +1,58 @@
 header {
+      /* color gris header */
     background-color: #f0f0f0;
+    /* Sombras sutiles header*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 footer {
+      /* color gris oscuro footer */
     background-color: #d8d8d8;
     color: #000;
+    /* Sombras sutiles footer*/
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+  background-color: #fff;
+  border-radius: 10px;
+      /* Sombras sutiles */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px; /* Un poco de espacio alrededor del contenido */
+  margin: 20px auto; /* Centra el contenido y le da espacio del header/footer */
+}
+
+/* Para los títulos, agrega un poco de espacio entre letras */
+h1, h2 {
+    letter-spacing: 1.5px;
+    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas para un efecto más moderno */
+}
+
+/* Para los párrafos, mejora el espacio entre líneas para la legibilidad */
+p {
+    line-height: 1.6;
+}
+
+
+@font-face {
+        /* Aquí agregas el color dorado-bronce del logo */
+    color: #966f36; 
+    
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplica la fuente a tus títulos */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+/* Aplica la fuente y el color a tus títulos */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #B69A5D; /* Este es un tono dorado más claro */
 }

@@ -30,7 +30,10 @@ Este es el sitio web oficial de Gabaón, una marca de cosmética coreana especia
 
 ### Acceder a la Página
 
-Puedes visitar la página web en línea a través del siguiente enlace: https://horaciomarcelo.github.io/gabaon/
+Puedes visitar la página web en línea a través de los siguientes enlaces:
+
+* **Versión de Netlify (Actualizaciones automáticas):** https://gabaon.netlify.app/
+* **Versión de GitHub Pages:** https://horaciomarcelo.github.io/gabaon/
 
 ### Contacto
 
