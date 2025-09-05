@@ -56,3 +56,9 @@ h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
     color: #B69A5D; /* Este es un tono dorado más claro */
 }
+
+.imagen-opiniones {
+    width: 80%; /* Le da un ancho de 80% de su contenedor */
+    max-width: 400px; /* Pero que no sea más grande que 400px */
+    height: auto; /* La altura se ajusta automáticamente */
+}
