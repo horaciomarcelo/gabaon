@@ -1,15 +1,15 @@
 header {
-      /* color gris header */
+      /* color gris en header */
     background-color: #f0f0f0;
-    /* Sombras sutiles header*/
+    /* Sombras sutiles en header*/
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 footer {
-      /* color gris oscuro footer */
+    /* color gris oscuro en footer */
     background-color: #d8d8d8;
     color: #000;
-    /* Sombras sutiles footer*/
+    /* Sombras sutiles en  footer*/
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -28,14 +28,14 @@ h1, h2 {
     text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas para un efecto más moderno */
 }
 
-/* Para los párrafos, mejora el espacio entre líneas para la legibilidad */
+/* en párrafos, mejora el espacio entre líneas para la legibilidad */
 p {
     line-height: 1.6;
 }
 
 
 @font-face {
-        /* Aquí agregas el color dorado-bronce del logo */
+        /*  agrego el color dorado-bronce del logo */
     color: #966f36; 
     
     font-family: 'Bebas Neue';
@@ -45,20 +45,47 @@ p {
     font-style: normal;
 }
 
-/* Aplica la fuente a tus títulos */
+/*  fuente de  los títulos */
 h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
 
-/* Aplica la fuente y el color a tus títulos */
+/*  fuente y  color  en  títulos */
 h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #B69A5D; /* Este es un tono dorado más claro */
+    color: #B69A5D; /*  un tono dorado más claro */
 }
 
 .imagen-opiniones {
-    width: 80%; /* Le da un ancho de 80% de su contenedor */
-    max-width: 400px; /* Pero que no sea más grande que 400px */
-    height: auto; /* La altura se ajusta automáticamente */
+    width: 80%; /*  da un ancho de 80% de su contenedor */
+    max-width: 400px; /* Pero que no supere   400px */
+    height: auto; /* la  altura se ajusta automáticamente */
 }
+
+/*  clase a  imagen , como el logo o imágenes de productos */
+.imagen-dinamica {
+    transition: all 0.3s ease;
+    cursor: pointer; /* Cambia el cursor para indicar que es interactiva */
+}
+
+.imagen-dinamica:hover {
+    transform: scale(1.05); /* Agranda la imagen un 5% */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #444;
+
+    /*
+ p: Este es el selector.  aplica a todas las etiquetas <p> que encuentre en el HTML. 
+ line-height: 1.8;: Aumenta el espacio entre las líneas de todos los párrafos.
+ letter-spacing: 1px;: Agrega un pequeño espacio entre las letras de todos los párrafos.
+ font-weight: 300;: Si la fuente lo permite, hace que el texto sea más delgado. 
+ color: #444;: Cambia el color del texto a un gris oscuro. 
+ */
+}
+
