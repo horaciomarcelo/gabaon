@@ -1,43 +1,47 @@
+/*
+    ======================================
+    Estilos para el diseño y el layout
+    ======================================
+*/
+html {
+    /* Esta propiedad hace que el desplazamiento sea suave y no brusco */
+    scroll-behavior: smooth;
+}
+
 header {
-      /* color gris en header */
-    background-color: #f0f0f0;
-    /* Sombras sutiles en header*/
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    /* Gradiente suave en el header */
+    background: linear-gradient(to right, #f0f0f0, #d8d8d8);
+    /* Sombra más sutil */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 footer {
-    /* color gris oscuro en footer */
-    background-color: #d8d8d8;
+    /* Gradiente suave en el footer */
+    background: linear-gradient(to right, #d8d8d8, #f0f0f0);
     color: #000;
-    /* Sombras sutiles en  footer*/
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
+    /* Sombra más sutil */
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-.main-content {
-  background-color: #fff;
-  border-radius: 10px;
-      /* Sombras sutiles */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 20px; /* Un poco de espacio alrededor del contenido */
-  margin: 20px auto; /* Centra el contenido y le da espacio del header/footer */
+a {
+    color: #966f36;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Para los títulos, agrega un poco de espacio entre letras */
-h1, h2 {
-    letter-spacing: 1.5px;
-    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas para un efecto más moderno */
+a:hover {
+    color: #B69A5D;
 }
 
-/* en párrafos, mejora el espacio entre líneas para la legibilidad */
-p {
-    line-height: 1.6;
-}
 
+
+/*
+    ======================================
+    Estilos para las tipografías
+    ======================================
+*/
 
 @font-face {
-        /*  agrego el color dorado-bronce del logo */
-    color: #966f36; 
-    
     font-family: 'Bebas Neue';
     src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
          url('../fonts/BebasNeue-Regular.woff') format('woff');
@@ -45,47 +49,54 @@ p {
     font-style: normal;
 }
 
-/*  fuente de  los títulos */
 h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #B69A5D;
 }
 
-
-/*  fuente y  color  en  títulos */
-h1, h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #B69A5D; /*  un tono dorado más claro */
-}
-
-.imagen-opiniones {
-    width: 80%; /*  da un ancho de 80% de su contenedor */
-    max-width: 400px; /* Pero que no supere   400px */
-    height: auto; /* la  altura se ajusta automáticamente */
-}
-
-/*  clase a  imagen , como el logo o imágenes de productos */
-.imagen-dinamica {
-    transition: all 0.3s ease;
-    cursor: pointer; /* Cambia el cursor para indicar que es interactiva */
-}
-
-.imagen-dinamica:hover {
-    transform: scale(1.05); /* Agranda la imagen un 5% */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-}
-
-p {
+p, ul, ol, li {
     line-height: 1.8;
     letter-spacing: 1px;
     font-weight: 300;
     color: #444;
-
-    /*
- p: Este es el selector.  aplica a todas las etiquetas <p> que encuentre en el HTML. 
- line-height: 1.8;: Aumenta el espacio entre las líneas de todos los párrafos.
- letter-spacing: 1px;: Agrega un pequeño espacio entre las letras de todos los párrafos.
- font-weight: 300;: Si la fuente lo permite, hace que el texto sea más delgado. 
- color: #444;: Cambia el color del texto a un gris oscuro. 
- */
 }
 
+/*
+    ======================================
+    Estilos para imágenes y elementos
+    ======================================
+*/
+
+.imagen-opiniones {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+.imagen-dinamica {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega esta línea */
+}
+
+.imagen-dinamica:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: #B69A5D;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #966f36;
+}
