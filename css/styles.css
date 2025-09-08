@@ -2,35 +2,63 @@
     ======================================
     Estilos para el diseño y el layout
     ======================================
+
 */
-html {
-    /* Esta propiedad hace que el desplazamiento sea suave y no brusco */
-    scroll-behavior: smooth;
-}
 
 header {
-    /* Gradiente suave en el header */
+    /* Gradiente suave en el header 
+    1.  'to right': Va de izquierda a derecha.
+    2.  '#f0f0f0': nicio con un gris muy claro.
+    3.  '#d8d8d8': fin  un gris un poco más oscuro.
+    */
     background: linear-gradient(to right, #f0f0f0, #d8d8d8);
     /* Sombra más sutil */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    /* Sombra de caja (box-shadow):
+    Añade un efecto de profundidad al elemento.
+    Valores: [horizontal] [vertical] [difuminado] [color]
+    Ejemplo:
+    0px: No hay movimiento horizontal- no hay sombra hacia los costados
+    4px: Se mueve 4px hacia abajo
+    6px: Se difumina 6px
+    rgba(0,0,0,0.1): Sombra negra con 10% de opacidad
+    */
 }
 
 footer {
     /* Gradiente suave en el footer */
     background: linear-gradient(to right, #d8d8d8, #f0f0f0);
-    color: #000;
+    /*color: #000;
+    línea extra en el footer está ahí para garantizar que el color 
+    de todo el texto dentro de ese elemento sea negro.*/
     /* Sombra más sutil */
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); 
 }
 
+
 a {
-    color: #966f36;
+    /* Color base de los enlaces.   color dorado/bronce
+       Aplica a todos,  menú y   celular a whatsappweb */
+    color: #966f36; 
+    
+    /* quita el subrayado de todos los enlaces. */
     text-decoration: none;
-    transition: color 0.3s ease;
+    
+    /* Hace que los enlaces se comporten como bloques,
+       permitiendo que las animaciones de 'transform'
+        funcionen correctamente. */
+    display: inline-block; 
+    
+    /*  hace una  animación suave.  al pasar el mouse por los links
+       cualquier propiedad  cambia en 0.3 segundos. */
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #B69A5D;
+    /* aplican a todos los enlaces de la página
+       cuando pasas el mouse por encima. */
+    color: #fcae05; /* color dorado brillante */
+    transform: scale(1.15); /* Agranda el texto un 15% */
 }
 
 
@@ -45,22 +73,28 @@ a:hover {
     font-family: 'Bebas Neue';
     src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
          url('../fonts/BebasNeue-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: normal; /* Establece el grosor normal de la fuente. */
+    font-style: normal; /* Establece el estilo de la fuente (normal, no cursiva). */
 }
 
 h1, h2 {
+    /* Aplica la fuente personalizada 'Bebas Neue' a los títulos. 
+    Si no se carga, usa 'sans-serif' como respaldo. */
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5px; 
+    /* Aumenta el espacio entre las letras para un efecto más estilizado. */
     text-transform: uppercase;
-    color: #B69A5D;
+    /* Convierte todas las letras a mayúsculas. */
+    color: #B69A5D;  /* Establece el color del texto a un tono dorado. */
 }
 
 p, ul, ol, li {
     line-height: 1.8;
-    letter-spacing: 1px;
-    font-weight: 300;
-    color: #444;
+     /* Aumenta el espacio entre las líneas de texto
+      para que sea más fácil de leer. */
+    letter-spacing: 1px; /* Añade un pequeño espacio entre cada letra. */
+    font-weight: 300;  /* Define el grosor de la fuente. '300'  */
+    color: #444; /* Establece el color del texto a un gris muy oscuro. */
 }
 
 /*
@@ -78,25 +112,51 @@ p, ul, ol, li {
 .imagen-dinamica {
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega esta línea */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        /* TRANSICIÓN: Prepara la imagen para una animación suave.
+        all': anima todas las propiedades que cambien.
+        0.3s': La animacoón durara 0.3 segundos.
+        ease':  efecto  suave (acelera y desacelera). */
+            /* CURSOR: Cambia el puntero del mouse a una mano. */
+         /* SOMBRA:  una sombra sutil  crea un efecto de profundidad.
+        0 2px 5px: La sombra se mueve 2px hacia abajo 
+       con  un difuminado de 5px.
+       rgba(0,0,0,0.1)': la sombra es de color negro 
+       con 10% de transparencia. */
 }
 
 .imagen-dinamica:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /*la imagen se agranda un 5% (1.05)   */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* cambia la sombra. La hace más grande y oscura para simular
+     que la imagen -se eleva-   o se acerca a la pantalla 
+     cuando el usuario la selecciona con el cursor.
+     0    desplazamiento Horizontal
+     8px   desplazamiento vertical -hacia abajo
+     15px  radio de difuminado- suavidad de los bordes de la sombra
+     0, 0, 0, 0    representa el color negro.
+     0.2     es el valor de opacidad o transparencia. 
+            Al usar 0.2, la sombra es 20% visible
+     */
 }
 
 button {
-    background-color: #B69A5D;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #B69A5D; /*color de fondo del botón  dorado-bronce. */
+    color: white;  /* color del texto dentro del botón como blanco */
+    padding: 15px 30px; 
+    /* espacio interno alrededor del texto del botón. 
+    Los 15px son para la parte superior e inferior, y los 30px para los lados*/
+    border: none;    /* Elimina el borde  */
+    border-radius: 5px;  /*redondea las esquinas del botón con un radio de 5px   */
+    font-size: 16px; /* tamaño de la fuente del texto en 16px*/
+    cursor: pointer;  /* Cambia el ícono del cursor a una mano  */
+    transition: background-color 0.3s ease; 
+    /* cambio de color de fondo durante 0.3 segundos
+    ease : velocidad de la animación lenta  */
 }
 
 button:hover {
     background-color: #966f36;
+    /* efecto visual cuando el usuario pasa el cursor sobre el botón
+    cambia el color de fondo del botón al tono dorado #966f36 */
 }
